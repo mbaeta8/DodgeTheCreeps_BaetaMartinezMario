@@ -10,7 +10,6 @@ func show_message(text):
 	$Missatge.show()
 	$MessageTimer.start()
 
-
 func show_game_over():
 	show_message("Game Over")
 	# Espereu fins que el MessageTimer hagi acabat de comptar.
