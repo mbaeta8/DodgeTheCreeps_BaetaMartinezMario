@@ -6,8 +6,8 @@ func _ready():
 	pass
 
 func show_message(text):
-	$Message.text = text
-	$Message.show()
+	$Missatge.text = text
+	$Missatge.show()
 	$MessageTimer.start()
 
 
@@ -16,8 +16,8 @@ func show_game_over():
 	# Espereu fins que el MessageTimer hagi acabat de comptar.
 	yield($MessageTimer,"timeout")
 	
-	$Message.text = "Dodge the\nCreeps!"
-	$Message.show()
+	$Missatge.text = "Dodge the\nCreeps!"
+	$Missatge.show()
 	# Feu un temporitzador one-shot i espereu que acabi.
 	yield(get_tree().create_timer(1),"timeout")
 	$StartButton.show()
@@ -30,4 +30,4 @@ func _on_StartButton_pressed():
 	emit_signal("start_game")
 
 func _on_MessageTimer_timeout():
-	$Message.hide()
+	$Missatge.hide()
